@@ -1,2 +1,4 @@
 # com.landing_page-html-sass
-ezzeaaze
+# A landing page for a e-commerce website
+# Using HTML and SASS
+# SASS for training the architecture
