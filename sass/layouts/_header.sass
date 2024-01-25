@@ -1,0 +1,59 @@
+@use '../utils/_all.sass' as utils
+
+.header
+  display: flex
+  justify-content: space-between
+  padding: 2.4rem
+  border-bottom: 1px solid #E2E8F0
+
+  &__nav,
+  &__logo,
+  &__list,
+  &__list-item,
+  &__list-dropdown,
+  &__connection
+    display: flex
+    align-items: center
+
+  &__logo
+    margin-right: 4.5rem
+    color: utils.$color-main
+    fill: utils.$color-main
+
+    &-icon
+      width: 3.5rem
+      height: 3.5rem
+      margin-right: 1.5rem
+
+    &-text
+      font-size: 3.2rem
+      font-weight: 700
+      line-height: 3.5rem
+
+  &__list
+
+    &-dropdown
+      @extend %font-size-16-24-500
+      color: utils.$color-text
+      margin-right: 2rem
+      cursor: pointer
+
+    &-arrow
+      padding-left: 0.8rem
+
+  &__connection
+    @extend %font-size-16-24-500
+    display: flex
+    gap: 1.6rem
+
+    &-login,
+    &-signup
+      padding: 1.2rem 2.8rem
+      border-radius: 0.8rem
+
+    &-login
+      color: utils.$color-main
+
+    &-signup
+      color: utils.$color-white
+      background-color: utils.$color-main

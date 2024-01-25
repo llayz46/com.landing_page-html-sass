@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button {
+  background-color: transparent;
+  border-width: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+}
+
+button {
+  font-family: Roboto, sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.header__list-dropdown, .header__connection {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 2.4rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2.4rem;
+  border-bottom: 1px solid #E2E8F0;
+}
+.header__nav, .header__logo, .header__list, .header__list-item, .header__list-dropdown, .header__connection {
+  display: flex;
+  align-items: center;
+}
+.header__logo {
+  margin-right: 4.5rem;
+  color: #2563EB;
+  fill: #2563EB;
+}
+.header__logo-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-right: 1.5rem;
+}
+.header__logo-text {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 3.5rem;
+}
+.header__list-dropdown {
+  color: #0F172A;
+  margin-right: 2rem;
+  cursor: pointer;
+}
+.header__list-arrow {
+  padding-left: 0.8rem;
+}
+.header__connection {
+  display: flex;
+  gap: 1.6rem;
+}
+.header__connection-login, .header__connection-signup {
+  padding: 1.2rem 2.8rem;
+  border-radius: 0.8rem;
+}
+.header__connection-login {
+  color: #2563EB;
+}
+.header__connection-signup {
+  color: #fff;
+  background-color: #2563EB;
+}/*# sourceMappingURL=main.css.map */
