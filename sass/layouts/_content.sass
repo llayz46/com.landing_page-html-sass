@@ -1,0 +1,37 @@
+@use '../utils/_all' as utils
+
+.content
+  @extend %padding-8-0
+
+  &__title
+    margin-bottom: 2.4rem
+
+  &__info
+    margin-bottom: utils.$marge
+
+  &__wrapper
+    display: flex
+
+  &__container-images,
+  &__container-texts
+    width: 50%
+    display: flex
+    align-items: center
+
+  &__container-images
+    justify-content: center
+
+  &__phone-mockup
+    position: absolute
+    translate: 10%
+    scale: 0.95
+
+  &__marge
+    margin-top: utils.$marge * 2
+
+  &__button
+    display: flex
+    margin-left: auto
+    margin-right: auto
+    width: fit-content
+    margin-top: utils.$marge

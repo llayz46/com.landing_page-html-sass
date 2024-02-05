@@ -12,8 +12,7 @@
   &__list-item,
   &__list-dropdown,
   &__connection
-    display: flex
-    align-items: center
+    @extend %flex-alIt-center
 
   &__logo
     margin-right: 4.5rem
@@ -41,6 +40,9 @@
     &-arrow
       padding-left: 0.8rem
 
+  &__burger
+    display: none
+
   &__connection
     @extend %font-size-16-24-500
     display: flex
@@ -53,7 +55,51 @@
 
     &-login
       color: utils.$color-main
+      border: 1px solid transparent
+      +utils.button-transition(0.12s)
+
+      &:hover
+        border: 1px solid utils.$color-main
 
     &-signup
       color: utils.$color-white
       background-color: utils.$color-main
+      transition: all 0.12s ease-in-out
+      +utils.button-transition(0.12s)
+
+      &:hover
+        background-color: darken(utils.$color-main, 20%)
+
+@media screen and (max-width: 1000px)
+
+  .header
+
+    &__list,
+    &__connection-signup
+      display: none
+
+    &__connection-login
+      color: utils.$color-white
+      background-color: utils.$color-main
+      border: none
+
+      &:hover
+        background-color: darken(utils.$color-main, 20%)
+        border: none
+
+    &__burger
+      display: flex
+      align-items: center
+      margin-left: auto
+      margin-right: 2.4rem
+      cursor: pointer
+
+@media screen and (max-width: 500px)
+
+  .header
+
+    &__connection
+      display: none
+
+    &__burger
+      margin: 0

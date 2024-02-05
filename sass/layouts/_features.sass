@@ -1,0 +1,16 @@
+@use '../utils/_all' as utils
+
+.features
+  margin-top: utils.$marge * 1.5
+  @extend %padding-8-0
+
+  &__cards-wrapper
+    display: flex
+    justify-content: space-between
+
+  &__card
+    @extend %flex-alIt-center
+    flex-direction: column
+    text-align: center
+    width: 31%
+    gap: 1.6rem
