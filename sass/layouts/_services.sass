@@ -1,0 +1,38 @@
+@use '../utils/_all' as utils
+@use 'sass:math'
+
+.services
+  @extend %padding-8-0
+
+  &__wrapper
+    display: flex
+
+  &__container-texts,
+  &__container-images
+    width: 50%
+    display: flex
+    justify-content: center
+
+  &__container-texts
+    flex-direction: column
+    gap: utils.$size-xxs * 3
+    padding-right: math.div(utils.$marge, 2)
+
+  &__button
+    width: fit-content
+
+  &__container-images
+    @extend %flex-alIt-center
+    position: relative
+    padding-left: math.div(utils.$marge, 2)
+
+  &__phone-mockup
+    position: absolute
+    scale: 0.95
+
+  &__frame-wrapper
+    position: absolute
+    display: flex
+    height: 130px
+    gap: utils.$size-xxs
+    left: 5rem

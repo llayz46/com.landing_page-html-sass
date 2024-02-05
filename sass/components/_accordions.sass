@@ -1,3 +1,5 @@
+@use '../utils/_all' as utils
+
 .content
 
   &__accordion
@@ -8,3 +10,9 @@
     &-tab
       padding: 0.8rem 0 0.8rem 4.8rem
       border-left: 3px solid #CBD5E1
+
+.faq__question
+  @extend %flex-alIt-center
+  justify-content: space-between
+  padding: (utils.$size-xxs * 4) 0
+  border-top: 1px solid #E2E8F0
