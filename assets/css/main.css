@@ -81,7 +81,7 @@ html {
   text-align: center;
 }
 
-.quote__text, .faq__question {
+.quote__text, .faq__question-title {
   font-size: 2.4rem;
   font-weight: 400;
   line-height: 3.8rem;
@@ -102,26 +102,39 @@ html {
   color: #0F172A;
 }
 
-.hero__desc, .features__card-text, .content__info, .quote__footer-text, .services__info {
+.hero__desc, .features__card-text, .content__info, .content__accordion-info, .quote__footer-text, .faq__answers, .services__info {
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 2.8rem;
   color: #0F172A;
 }
 
-.header__list-dropdown, .header__connection {
+.footer__item-title, .header__list-dropdown, .header__connection {
   font-size: 1.6rem;
   font-weight: 500;
   line-height: 2.4rem;
 }
 
-.faq__question, .services__container-images, .features__card, .hero__presentation, .hero__container-images, .header__nav, .header__logo, .header__list, .header__list-item, .header__list-dropdown, .header__connection {
+.footer__item-link, .footer__copyright {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.2rem;
+  color: #475569;
+}
+
+.logo, .faq__question, .footer__container-socials, .services__container-images, .features__card, .hero__presentation, .hero__container-images, .header__nav, .header__list, .header__list-item, .header__list-dropdown, .header__connection {
   display: flex;
   align-items: center;
 }
 
 .services, .faq, .testimonials__wrapper, .content, .features {
   padding: 8rem 0;
+}
+
+.content__accordion-info, .faq__answers {
+  height: 0;
+  overflow: hidden;
+  transition: 0.3s;
 }
 
 .features {
@@ -147,21 +160,6 @@ html {
   padding: 2.4rem;
   border-bottom: 1px solid #E2E8F0;
 }
-.header__logo {
-  margin-right: 4.5rem;
-  color: #2563EB;
-  fill: #2563EB;
-}
-.header__logo-icon {
-  width: 3.5rem;
-  height: 3.5rem;
-  margin-right: 1.5rem;
-}
-.header__logo-text {
-  font-size: 3.2rem;
-  font-weight: 700;
-  line-height: 3.5rem;
-}
 .header__list-dropdown {
   color: #0F172A;
   margin-right: 2rem;
@@ -186,8 +184,10 @@ html {
   border: 1px solid transparent;
   transition: all 0.12s ease-in-out;
 }
-.header__connection-login:hover {
-  border: 1px solid #2563EB;
+@media screen and (min-width: 1200px) {
+  .header__connection-login:hover {
+    border: 1px solid #2563EB;
+  }
 }
 .header__connection-signup {
   color: #fff;
@@ -195,8 +195,10 @@ html {
   transition: all 0.12s ease-in-out;
   transition: all 0.12s ease-in-out;
 }
-.header__connection-signup:hover {
-  background-color: #0e3b9c;
+@media screen and (min-width: 1200px) {
+  .header__connection-signup:hover {
+    background-color: #0e3b9c;
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -244,7 +246,7 @@ html {
 }
 .hero__button-wrapper {
   display: flex;
-  gap: 4.8rem;
+  gap: 1rem;
 }
 .hero__presentation {
   gap: 1.5rem;
@@ -371,6 +373,29 @@ html {
   left: 5rem;
 }
 
+.footer__list {
+  display: flex;
+  justify-content: space-between;
+  padding: 4.8rem 0;
+  border-bottom: 1px solid #E2E8F0;
+}
+.footer__item {
+  display: flex;
+  flex-direction: column;
+}
+.footer__item-title, .footer__item-link {
+  margin: 1.2rem 0;
+}
+.footer__container-socials {
+  justify-content: space-between;
+  padding-top: 4.8rem;
+  padding-bottom: 2.4rem;
+}
+.footer__socials {
+  display: flex;
+  gap: 1.6rem;
+}
+
 .hero__button,
 .content__button,
 .services__button {
@@ -378,6 +403,14 @@ html {
   color: #fff;
   padding: 2rem 4.8rem;
   border-radius: 0.8rem;
+  transition: all 0.12s ease-in-out;
+}
+@media screen and (min-width: 1200px) {
+  .hero__button:hover,
+  .content__button:hover,
+  .services__button:hover {
+    background-color: #0e3b9c;
+  }
 }
 
 .hero__presentation {
@@ -385,10 +418,17 @@ html {
   font-size: 2rem;
   font-weight: 500;
   line-height: 2.4rem;
+  padding: 2rem 4.8rem;
+  border-radius: 0.8rem;
 }
 .hero__presentation-icon {
   width: 2.4rem;
   height: 2.4rem;
+}
+@media screen and (min-width: 1200px) {
+  .hero__presentation:hover {
+    outline: 1px solid #2563EB;
+  }
 }
 
 .hero__title {
@@ -428,12 +468,19 @@ html {
 .quote__footer-text {
   line-height: normal;
 }
-.faq__question {
+.faq__question-title {
   color: #2563EB;
 }
-
 .services__title {
   text-align: left;
+}
+.footer__item-title {
+  color: #475569;
+}
+@media screen and (min-width: 1200px) {
+  .footer__item .footer__item-link:hover {
+    color: #030405;
+  }
 }
 .hero__circle {
   width: 90%;
@@ -442,7 +489,30 @@ html {
   display: flex;
   background-image: radial-gradient(closest-side, #dbeafe, rgba(219, 234, 254, 0));
 }
+@media screen and (min-width: 1200px) {
+  .hero__circle {
+    animation: rotate 60s linear infinite;
+  }
+}
 
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .content__container-images svg,
+  .services__container-images svg {
+    transition: all 0.3s ease;
+  }
+  .content__container-images:hover svg,
+  .services__container-images:hover svg {
+    scale: 1.05;
+  }
+}
 .icon__features-wrap {
   display: flex;
   position: relative;
@@ -495,14 +565,31 @@ html {
 .content__accordion-tab {
   padding: 0.8rem 0 0.8rem 4.8rem;
   border-left: 3px solid #CBD5E1;
+  cursor: pointer;
+  transition: 0.3s;
 }
-
+.content__accordion-tab.active .content__accordion-info {
+  height: 115px;
+  padding-top: 2.4rem;
+}
+.content__accordion-tab.active {
+  border-left: 3px solid #2563EB;
+}
 .faq__question {
   justify-content: space-between;
   padding: 3.2rem 0;
+  cursor: pointer;
+}
+.faq__question-wrapper {
   border-top: 1px solid #E2E8F0;
 }
-
+.faq__question-wrapper.active .faq__answers {
+  height: 60px;
+  padding-bottom: 3.2rem;
+}
+.faq__question-wrapper.active .faq__question-arrow {
+  transform: rotate(180deg);
+}
 .testimonials__nav-list {
   display: flex;
   gap: 0.8rem;
@@ -526,4 +613,20 @@ html {
   box-sizing: border-box;
   outline: 2px dashed #EF4444;
   outline-offset: -2px;
+}
+
+.logo {
+  margin-right: 4.5rem;
+  color: #2563EB;
+  fill: #2563EB;
+}
+.logo-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-right: 1.5rem;
+}
+.logo-text {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 3.5rem;
 }/*# sourceMappingURL=main.css.map */

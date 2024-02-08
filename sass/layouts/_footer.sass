@@ -1,0 +1,27 @@
+@use '../utils/_all' as utils
+
+.footer
+
+  &__list
+    display: flex
+    justify-content: space-between
+    padding: (utils.$size-xxs * 6) 0
+    +utils.border(bottom)
+
+  &__item
+    display: flex
+    flex-direction: column
+
+    &-title,
+    &-link
+      margin: 1.2rem 0
+
+  &__container-socials
+    @extend %flex-alIt-center
+    justify-content: space-between
+    padding-top: (utils.$size-xxs * 6)
+    padding-bottom: (utils.$size-xxs * 3)
+
+  &__socials
+    display: flex
+    gap: utils.$size-xxs * 2
