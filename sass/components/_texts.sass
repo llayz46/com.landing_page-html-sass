@@ -31,13 +31,16 @@
   &__accordion-title
     @extend %font-size-20-22-500
 
+  &__accordion-info
+    @extend %font-size-18-28-400
+
 // TESTIMONIALS
 .testimonials
   &__title
     font-size: 2rem
     font-weight: 700
     letter-spacing: 0.3rem
-    color: #475569
+    color: utils.$color-grey
 
 .quote
   &__text
@@ -68,9 +71,12 @@
   &__title
     @extend %font-size-56-60-800
 
-  &__question
+  &__question-title
     @extend %font-size-24-38-400
     color: utils.$color-main
+
+  &__answers
+    @extend %font-size-18-28-400
 
 // SERVICES
 .services
@@ -80,3 +86,20 @@
 
   &__info
     @extend %font-size-18-28-400
+
+// FOOTER
+.footer
+  &__item
+    &-title
+      @extend %font-size-16-24-500
+      color: utils.$color-grey
+    
+    &-link
+      @extend %font-size-16-22-400
+
+    @media screen and (min-width: utils.$desktop)
+      .footer__item-link:hover
+        color: darken(utils.$color-grey, 33%)
+
+  &__copyright
+    @extend %font-size-16-22-400
