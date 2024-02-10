@@ -1,21 +1,16 @@
 @use '../utils/_all.sass' as utils
 
 .hero__circle
-  width: 90%
+  width: 85%
   aspect-ratio: 1/1
   border-radius: 100%
   display: flex
   background-image: radial-gradient(closest-side, #dbeafe, #dbeafe00)
 
-  @media screen and (min-width: utils.$desktop)
-    animation: rotate 60s linear infinite
-
-@keyframes rotate
-  from
-    transform: rotate(0deg)
-
-  to
-    transform: rotate(360deg)
+  @media screen and (max-width: 1000px)
+    position: absolute
+    width: 50%
+    min-width: 330px
 
 @media screen and (min-width: utils.$desktop)
   .content__container-images,

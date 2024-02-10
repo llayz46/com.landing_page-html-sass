@@ -11,8 +11,3 @@ const accordion = (accordion) => {
 
 accordion(accordionContent)
 accordion(accordionFaq)
-
-const okay = document.querySelector('.test')
-okay.addEventListener('click', () => {
-  okay.classList.toggle('active')
-})

@@ -15,11 +15,22 @@
 
   &__list
 
+    &-item
+      position: relative
+      flex-direction: column
+      align-items: flex-start
+
     &-dropdown
       @extend %font-size-16-24-500
       color: utils.$color-text
       margin-right: 2rem
       cursor: pointer
+      padding: 0.5rem 1rem
+      border-radius: 0.8rem
+      +utils.button-transition
+
+      &:hover
+        background-color: utils.$color-light-grey
 
     &-arrow
       padding-left: 0.8rem
@@ -56,7 +67,7 @@
         &:hover
           background-color: darken(utils.$color-main, 20%)
 
-@media screen and (max-width: 1000px)
+@media screen and (max-width: 1050px)
 
   .header
 
@@ -89,3 +100,23 @@
 
     &__burger
       margin: 0
+
+.header__sublist
+  opacity: 0
+  pointer-events: none
+  position: absolute
+  bottom: 0
+  transform: translateY(100%)
+  padding-top: 0.5rem
+  transition: all 0.12s ease-in-out
+
+  &-item
+    @extend %font-size-16-24-500
+    padding-top: 0.3rem
+    cursor: pointer
+    padding: 0.2rem 0.5rem
+    border-radius: 0.4rem
+    +utils.button-transition
+
+    &:hover
+      background-color: utils.$color-light-grey
